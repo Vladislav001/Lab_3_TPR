@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Теория принятия решений Гурьев В.В. ИВТ-363 Вариант №8</title>
+		<link href="style.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="script.js"></script>
+	</head>
+	<body onload="addTable(3,3)">
+		<h3>Гурьев В.В. ИВТ-363 Вариант №8</h3>
+		<h3>Критерий Гурвица (при с=0.5) и Критерий Севиджа</h3>
+
+		<div id="param">
+
+		</div>
+		<br>
+		<table>
+			<tr>
+				<td id="name_columns">
+				</td>
+				<td id="name_results">
+				</td>
+			</tr>
+			<tr>
+				<td id="inputi">
+				</td>
+				<td id="results">
+				</td>
+			</tr>
+		</table>
+		<br>
+
+		<div>
+			<input type="button" class="btn btn-primary" onclick="addRow()" value="Добавить вариант">
+			<input type="button" class="btn btn-primary" onclick="addColumn()" value="Добавить критерий">
+		</div>
+		<div>
+			<input type="button" class="btn btn-danger" onclick="delRow()" value="Удалить вариант">
+			<input type="button" class="btn btn-danger" onclick="delColumn()" value="Удалить критерий">
+		</div>
+		<div>
+			<input type="button" class="btn btn-success" onclick="calculate()" value="Рассчет">
+		</div>
+		<div>
+			<input type="button" class="btn btn-secondary" onclick="saveFile()" value="Сохранить в файл">
+		</div>
+
+		<div>
+			<b>Загрузить файл со входными данными</b>
+		</div>
+		<div class="custom-file" style="width:350px; margin-left:585px;">
+    <input type="file" onchange="loadFile(this.files)" id="file">
+    <label class="custom-file-label" for="file">Выберите файл</label>
+  </div>
+
+		<br>
+		<div class="container">
+			<select name="method" class="form-control" style="width:350px; margin-left:372px; margin-top:5px;" id="method" onchange="changeInput()">
+				<option value="sevidg" style="display: none">Критерий Сэвиджа</option>
+				<option value="gurvits" style="display: none">Критерий Гурвица</option>
+				<option selected value="sevidg">Критерий Сэвиджа</option>
+				<option value="gurvits">Критерий Гурвица</option>
+			</select>
+		</div>
+		<div>
+			<form name="info">
+				<input type="button" class="btn btn-primary" value="Информация о методе" onclick="openInfo()">
+			</form>
+		</div>
+
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</body>
+
+
+
+	    <!--Copyright-->
+	    <div class="footer-copyright py-3 text-center" style="margin-top:10px;">
+	        © 2018 Автор:
+	        <a href="https://vk.com/vladiclav001"> Гурьев В.В. </a>
+	    </div>
+	    <!--/.Copyright-->
+
+	</footer>
+	<!--/.Footer-->
+
+
+</html>
