@@ -153,7 +153,7 @@ function addTable(row, column) {
           insertNameResults('F'+j+'\'');
         }
         insertTable(matrix);
-        insertNameResults('min(Eir)');
+        insertNameResults('max(Eir)');
         insertColumn(maxInRow(matrix));
         var eir = [];
         for(var i=0; i<matrix.length; i++) {
